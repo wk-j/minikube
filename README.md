@@ -55,7 +55,7 @@ minikube service dotnet-web
 
 *With yml*
 
-``
+```
 kubectl apply -f z-deploy.yml
 kubectl apply -f z-service.yml
 kubectl get svc
