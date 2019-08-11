@@ -52,3 +52,22 @@ kubectl expose deployment dotnet-web \
 kubectl get deployments
 minikube service dotnet-web
 ```
+
+*With yml*
+
+``
+kubectl apply -f z-deploy.yml
+kubectl apply -f z-service.yml
+kubectl get svc
+minikube service dotnetlinux
+```
+
+*Clean*
+
+```
+kubectl delete pods,services --all
+
+kubectl get all
+kubectl delete deployment.apps/hello-node
+kubectl delete deployment.apps/dotnetlinux
+```
