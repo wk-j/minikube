@@ -70,4 +70,5 @@ kubectl delete pods,services --all
 kubectl get all
 kubectl delete deployment.apps/hello-node
 kubectl delete deployment.apps/dotnetlinux
+kubectl delete deployment.apps/dotnet-web
 ```
