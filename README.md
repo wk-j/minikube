@@ -8,10 +8,15 @@ docker push wearetherock/dotnet-web:latest
 
 *Install*
 
-```
+```bash
 sysctl -a | grep -E --color 'machdep.cpu.features|VMX'
 brew cask install minikube
 brew cask install virtualbox
+
+brew upgrade --cask minikube
+brew reinstall minikube
+brew upgrade kubectl
+brew link minikube
 ```
 
 *Basic*
@@ -24,6 +29,8 @@ kubectl get pods
 kubectl get events
 kubectl config view
 kubectl get nodes
+
+minikube delete
 ```
 
 *Start node*
@@ -51,11 +58,13 @@ kubectl expose deployment dotnet-web \
 
 kubectl get deployments
 minikube service dotnet-web
+
+http://localhost:xyz/api/values
 ```
 
 *With yml*
 
-```
+```bash
 kubectl apply -f z-deploy.yml
 kubectl apply -f z-service.yml
 kubectl get svc
